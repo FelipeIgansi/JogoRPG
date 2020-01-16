@@ -3,7 +3,6 @@
 from Personagem import Personagem_Class
 from random import randrange
 
-p1 = Personagem_Class('Gerald', 1000, 356, 689, 521)
 ListChars = []
 op = 0
 for i in range(5):
@@ -29,12 +28,33 @@ while(op < 6):
     op = int(input('Qual é a opção desejada (escolha apenas o numero)?  '))
 
     if(op == 1):
-        pass
+
+        # Cadastro
+        nome = input('Qual é o nome do personagem: ')
+        vida = input('Quanto de vida o personagem tem:  ')
+        mana = input('Quanto de mana o persnagem tem:  ')
+        forca = input('Quanto de força o personagem tem:  ')
+        defesa = input('Quanto de defesa ele tem:  ')
+
+        ListChars.append([Personagem_Class(nome, vida, mana, forca, defesa)])
+
     elif(op == 2):
+
+        #Matar personagem
+
         pass
     elif(op == 3):
+
+        #Atacar
+
         pass
     elif(op == 4):
+
+        #Defender
+
         pass
     elif(op == 5):
+
+        #Disparar feitiço
+
         pass

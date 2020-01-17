@@ -8,6 +8,8 @@ class Personagem_Class:
         self.forca = forca
         self.defesa = defesa
 
+
+
     def MostrarVida(self, hp = 100):
         if (hp == 100):
             return "|{}| - {}%".format("█"*10, hp)

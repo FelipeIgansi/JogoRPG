@@ -1,7 +1,10 @@
 # Criando os personagens
-
 from Personagem import Personagem_Class
 from random import randrange
+import os
+
+def LimparConsole():
+    print("\n"*10)
 
 ListChars = []
 op = 0
@@ -28,8 +31,8 @@ while(op < 6):
     op = int(input('Qual é a opção desejada (escolha apenas o numero)?  '))
 
     if(op == 1):
+        LimparConsole()
 
-        # Cadastro
         nome = input('Qual é o nome do personagem: ')
         vida = input('Quanto de vida o personagem tem:  ')
         mana = input('Quanto de mana o persnagem tem:  ')
@@ -40,21 +43,67 @@ while(op < 6):
 
     elif(op == 2):
 
-        #Matar personagem
+        # Matar personagem
 
-        pass
+        if (not ListChars):
+            LimparConsole()
+            print('Personagem ainda não criado!')
+            print('Crie-o primeiro.')
+
+        else:
+            LimparConsole()
+            print('Como diria o grande pensador Sr Omar:')
+            print('\n\n - Sr Omar: Tragico!\n\n')
+
+            morte = input('Como o personagem deve morrer?  ')
+
+
+
+
     elif(op == 3):
+        # Atacar
 
-        #Atacar
+        if (not ListChars):
+            LimparConsole()
+            print('Personagem ainda não criado!')
+            print('Crie-o primeiro.')
 
-        pass
+        else:
+            LimparConsole()
+
+
+
+
+
     elif(op == 4):
 
-        #Defender
+        # Defender
 
-        pass
+        if (not ListChars):
+            LimparConsole()
+            print('Personagem ainda não criado!')
+            print('Crie-o primeiro.')
+
+        else:
+            LimparConsole()
+
+
+
+
+
     elif(op == 5):
+        # Disparar feitiço
 
-        #Disparar feitiço
+        if (not ListChars):
+            LimparConsole()
+            print('Personagem ainda não criado!')
+            print('Crie-o primeiro.')
 
-        pass
+        else:
+            LimparConsole()
+
+
+
+
+
+

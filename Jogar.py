@@ -1,32 +1,23 @@
 # Criando os personagens
 from Personagem import Personagem_Class
+from ConstroiTela import *
 from random import randrange
-import os
+
 
 def LimparConsole():
     print("\n"*10)
 
 ListChars = []
 op = 0
-for i in range(5):
-    #nome = input('Qual é o nome do personagem?   ')
-    nome = "Personagem "+str(randrange(0,100))
-    vida = randrange(0, 101)
-    mana = randrange(500, 1500)
-    forca = randrange(500, 1500)
-    defesa = randrange(500, 1500)
-
-    ListChars.append([Personagem_Class(nome, vida, mana, forca, defesa)])
 
 
 while(op < 2):
-    print("Escolha uma das opções desejadas:  ")
-    print("   1 - Cadastrar personagem")
-    print("   2 - Sair")
 
-    op = int(input('Qual é a opção desejada (escolha apenas o numero)?  '))
+    TelaPrincipal()
+    opcao = input('O que você deseja fazer?  ')
 
-    if(op == 1):
+
+    if(op == '1' or  'cadastrar'.lower() in opcao.lower()):
         LimparConsole()
 
         nome = input('Qual é o nome do personagem: ')

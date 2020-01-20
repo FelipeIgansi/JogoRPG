@@ -1,23 +1,23 @@
 # Criando os personagens
-from Personagem import Personagem_Class
 from ConstroiTela import *
-from random import randrange
+from Personagem import Personagem_Class
 
 
 def LimparConsole():
-    print("\n"*10)
+    print("\n" * 10)
+
 
 ListChars = []
+
 op = 0
 
+while op < 2:
 
-while(op < 2):
-
+    # Exibe a mensagem incial
     TelaPrincipal()
     opcao = input('O que você deseja fazer?  ')
 
-
-    if(op == '1' or  'cadastrar'.lower() in opcao.lower()):
+    if op == '1' or 'cadastrar'.lower() in opcao.lower():
         LimparConsole()
 
         nome = input('Qual é o nome do personagem: ')
@@ -28,30 +28,25 @@ while(op < 2):
 
         ListChars.append([Personagem_Class(nome, vida, mana, forca, defesa)])
 
-        if (len(ListChars) !=  0):
+        if len(ListChars) != 0:
 
             op1 = 0
 
-            while (op1 < 5):
-                print("   1 - Atacar")
-                print("   2 - Defender")
-                print("   3 - Disparar feitiço")
-                print("   4 - Finalizar personagem")
-                print("   5 - Sair")
+            while op1 < 5:
+                MenuAcoes()
 
                 op1 = int(input('Qual é a opção desejada (escolha apenas o numero)?  '))
 
-
-                if(op1 == 1):
+                if op1 == 1:
                     print('Atacar')
                     break
-                elif(op1 ==2):
+                elif op1 == 2:
                     print('Defender')
                     break
-                elif(op1 == 3):
+                elif op1 == 3:
                     print('Disparar feitiço')
                     break
-                elif(op1 == 4):
+                elif op1 == 4:
                     print('Finalizar personagem')
                     break
 

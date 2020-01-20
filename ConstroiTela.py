@@ -1,5 +1,5 @@
 def TelaPrincipal():
-    print("Escolha uma das opções desejadas:  ")
+    print("Menu de ações \n")
     print("   1 - Cadastrar personagem")
     print("   2 - Sair")
 

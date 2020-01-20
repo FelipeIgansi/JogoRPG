@@ -11,13 +11,15 @@ ListChars = []
 
 op = 0
 
-while op < 2:
-
+while 2 > op >= 0:
+    LimparConsole()
     # Exibe a mensagem incial
     TelaPrincipal()
+    print('')
     opcao = input('O que você deseja fazer?  ')
+    if opcao == '1' or opcao == 'cadastrar'.lower() in opcao.lower():
 
-    if op == '1' or 'cadastrar'.lower() in opcao.lower():
+        # Limpa o console
         LimparConsole()
 
         nome = input('Qual é o nome do personagem: ')
@@ -28,7 +30,7 @@ while op < 2:
 
         ListChars.append([Personagem_Class(nome, vida, mana, forca, defesa)])
 
-        if len(ListChars) != 0:
+        if len(ListChars.count()) != 0:
 
             op1 = 0
 
@@ -52,66 +54,3 @@ while op < 2:
 
         else:
             print("Ocorreu um erro!")
-'''
-    elif(op == 2):
-
-        # Matar personagem
-
-        if (not ListChars):
-            LimparConsole()
-            print('Personagem ainda não criado!')
-            print('Crie-o primeiro.')
-
-        else:
-            LimparConsole()
-            print('Como diria o grande pensador Sr Omar:')
-            print('\n\n - Sr Omar: Tragico!\n\n')
-
-            morte = input('Como o personagem deve morrer?  ')
-
-
-
-
-    elif(op == 3):
-        # Atacar
-
-        if (not ListChars):
-            LimparConsole()
-            print('Personagem ainda não criado!')
-            print('Crie-o primeiro.')
-
-        else:
-            LimparConsole()
-
-
-
-
-
-    elif(op == 4):
-
-        # Defender
-
-        if (not ListChars):
-            LimparConsole()
-            print('Personagem ainda não criado!')
-            print('Crie-o primeiro.')
-
-        else:
-            LimparConsole()
-
-
-
-
-
-    elif(op == 5):
-        # Disparar feitiço
-
-        if (not ListChars):
-            LimparConsole()
-            print('Personagem ainda não criado!')
-            print('Crie-o primeiro.')
-
-        else:
-            LimparConsole()
-
-'''

@@ -19,14 +19,10 @@ for i in range(5):
     ListChars.append([Personagem_Class(nome, vida, mana, forca, defesa)])
 
 
-while(op < 6):
+while(op < 2):
     print("Escolha uma das opções desejadas:  ")
     print("   1 - Cadastrar personagem")
-    print("   2 - Matar personagem")
-    print("   3 - Atacar")
-    print("   4 - Defender")
-    print("   5 - Disparar feitiço")
-    print("   6 - Sair")
+    print("   2 - Sair")
 
     op = int(input('Qual é a opção desejada (escolha apenas o numero)?  '))
 
@@ -41,6 +37,36 @@ while(op < 6):
 
         ListChars.append([Personagem_Class(nome, vida, mana, forca, defesa)])
 
+        if (len(ListChars) !=  0):
+
+            op1 = 0
+
+            while (op1 < 5):
+                print("   1 - Atacar")
+                print("   2 - Defender")
+                print("   3 - Disparar feitiço")
+                print("   4 - Finalizar personagem")
+                print("   5 - Sair")
+
+                op1 = int(input('Qual é a opção desejada (escolha apenas o numero)?  '))
+
+
+                if(op1 == 1):
+                    print('Atacar')
+                    break
+                elif(op1 ==2):
+                    print('Defender')
+                    break
+                elif(op1 == 3):
+                    print('Disparar feitiço')
+                    break
+                elif(op1 == 4):
+                    print('Finalizar personagem')
+                    break
+
+        else:
+            print("Ocorreu um erro!")
+'''
     elif(op == 2):
 
         # Matar personagem
@@ -102,8 +128,4 @@ while(op < 6):
         else:
             LimparConsole()
 
-
-
-
-
-
+'''

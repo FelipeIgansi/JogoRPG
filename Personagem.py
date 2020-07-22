@@ -1,7 +1,7 @@
 from random import randrange
 
 class Personagem_Class:
-    def __init__(self, nome, vida, mana, forca, defesa):
+    def __init__(self, nome = 0, vida =  0, mana = 0, forca = 0, defesa = 0):
         self.nome = nome
         self.vida = vida
         self.mana = mana
@@ -26,10 +26,15 @@ class Personagem_Class:
 
 
 
-    def CalculaDano(self,level, forca, defesa):
-        return ((((2 * level / 5 + 2) * forca / defesa) / 50) + 2)
+    def CalculaDano(self,level = 0, forca = 0, defesa = 0):
 
-    def Ataca(self, vida, level, forca, defesa):
+        if level == 0 or forca == 0 or defesa == 0:
+            print('Ocorreu um erro. \nÉ necessário que os atributos do personagem sejam maiores que zero. \nVaores:\nLevel {} \nForça {} \nDefesa {}'.format(level, forca, defesa))
+
+        else:
+            return ((((2 * level / 5 + 2) * forca / defesa) / 50) + 2)
+
+    def Ataca(self, vida = 0, level = 0, forca = 0, defesa = 0):
 
         if (self.forca > self.defesa):
             dano = Personagem_Class.CalculaDano(level, forca, defesa)

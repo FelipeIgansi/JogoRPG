@@ -30,7 +30,9 @@ while 2 > op >= 0:
 
         ListChars.append([Personagem_Class(nome, vida, mana, forca, defesa)])
 
-        if len(ListChars.count()) != 0:
+        print(ListChars)
+
+        if len(ListChars[0].count()) != 0:
 
             op1 = 0
 
